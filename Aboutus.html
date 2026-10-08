@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MugHaven - About Us</title>
+
+    <link rel="icon" href="logo.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(255, 190, 130, .3),
+                    rgba(180, 70, 70, .35)
+                ),
+                url("mascot.png");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #4a281d;
+        }
+
+        header {
+            width: 100%;
+            padding: 15px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background:
+                rgba(255,245,225,.75);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 2px solid
+                rgba(255,255,255,.5);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logo-area h1 {
+            font-size: 30px;
+        }
+
+        .logo-area p {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4a281d;
+
+            padding: 10px 16px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #4a281d;
+            color: white;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 0;
+        }
+
+        .about-box {
+            padding: 45px;
+
+            background:
+                rgba(255,248,235,.78);
+
+            backdrop-filter: blur(12px);
+
+            border-radius: 30px;
+
+            border: 2px solid
+                rgba(255,255,255,.6);
+
+            box-shadow:
+                0 15px 35px
+                rgba(74,40,29,.2);
+        }
+
+        .about-box h2 {
+            text-align: center;
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+
+            margin-bottom: 30px;
+
+            font-size: 18px;
+        }
+
+        .about-box p {
+            text-align: center;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            margin-bottom: 18px;
+        }
+
+        .about-photo {
+            display: block;
+
+            width: 70%;
+
+            max-width: 700px;
+
+            margin: 30px auto 0;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(74,40,29,.25);
+        }
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #4a281d;
+
+            color: white;
+        }
+
+        @media(max-width:800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+
+            .about-photo {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo-area">
+
+        <img src="logos.png"
+             alt="MugHaven Logo">
+
+        <div>
+
+            <h1>MugHaven</h1>
+
+            <p>CUPS & MUGS SHOP</p>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="Homepage.html">
+            HomePage
+        </a>
+
+        <a href="Aboutus.html"
+           class="active">
+            About Us
+        </a>
+
+        <a href="Contactus.html">
+            Contact Us
+        </a>
+
+        <a href="Products.html">
+            Products
+        </a>
+
+        <a href="login.html">
+            Log Out
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<section class="about-box">
+
+    <h2>
+        About Us
+    </h2>
+
+    <p class="subtitle">
+        A little story behind every sip. ☕
+    </p>
+
+
+    <p>
+        Welcome to MugHaven, your cozy destination
+        for unique and charming cups and mugs made
+        for every kind of moment.
+    </p>
+
+
+    <p>
+        We believe that the perfect mug can make
+        your morning coffee, afternoon tea,
+        study session, or relaxing evening feel
+        a little more special.
+    </p>
+
+
+    <p>
+        Our shop offers a variety of carefully
+        selected designs, from cute and colorful
+        styles to simple and elegant classics,
+        so there is always something to match
+        your personality and taste.
+    </p>
+
+
+    <p>
+        At MugHaven, we believe that every cup
+        tells a story and every sip can create
+        a special moment.
+    </p>
+
+
+    <p>
+        Our goal is to bring a little warmth,
+        creativity, and happiness into your day,
+        one mug at a time.
+    </p>
+
+
+    <p>
+        Because at MugHaven, every cup has a
+        little bit of happiness waiting inside.
+        ☕♡
+    </p>
+
+
+    <img src="maid.png"
+         class="about-photo"
+         alt="MugHaven Mascot">
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    ☕ MugHaven — Cups & Mugs Shop
+    · Made with warmth & happiness ♡
+
+</footer>
+
+
+</body>
+
+</html>

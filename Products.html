@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MugHaven - Products</title>
+
+    <link rel="icon" href="logo.png">
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(255,190,130,.3),
+                    rgba(180,70,70,.35)
+                ),
+                url("mascot.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            color: #4a281d;
+        }
+
+
+        /* HEADER */
+
+        header {
+
+            width: 100%;
+
+            padding: 15px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(255,245,225,.75);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 2px solid
+                rgba(255,255,255,.5);
+        }
+
+
+        .logo-area {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .logo-area img {
+
+            width: 60px;
+
+            height: 60px;
+
+            object-fit: contain;
+        }
+
+
+        .logo-area h1 {
+
+            font-size: 30px;
+        }
+
+
+        .logo-area p {
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+
+            display: flex;
+
+            gap: 10px;
+        }
+
+
+        nav a {
+
+            text-decoration: none;
+
+            color: #4a281d;
+
+            padding: 10px 16px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+
+        nav a:hover,
+        nav a.active {
+
+            background: #4a281d;
+
+            color: white;
+        }
+
+
+        /* PAGE TITLE */
+
+        .page-title {
+
+            text-align: center;
+
+            font-size: 40px;
+
+            margin-top: 45px;
+
+            color: #4a281d;
+        }
+
+
+        .page-subtitle {
+
+            text-align: center;
+
+            margin-top: 10px;
+
+            margin-bottom: 35px;
+
+            font-size: 17px;
+        }
+
+
+        /* PRODUCTS */
+
+        .products {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto 60px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* PRODUCT CARD */
+
+        .product-card {
+
+            background:
+                rgba(255,248,235,.85);
+
+            backdrop-filter: blur(12px);
+
+            border: 2px solid
+                rgba(255,255,255,.7);
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px
+                rgba(74,40,29,.25);
+
+            transition: .3s;
+        }
+
+
+        .product-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 35px
+                rgba(74,40,29,.35);
+        }
+
+
+        /* PRODUCT IMAGE */
+
+        .product-card img {
+
+            width: 100%;
+
+            height: 250px;
+
+            object-fit: contain;
+
+            display: block;
+
+            background:
+                rgba(255,255,255,.35);
+
+            padding: 15px;
+        }
+
+
+        /* PRODUCT INFORMATION */
+
+        .product-info {
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+
+        .product-info h2 {
+
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .product-info p {
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            margin-bottom: 12px;
+        }
+
+
+        .product-info h3 {
+
+            font-size: 22px;
+
+            color: #b76b19;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* BUY BUTTON */
+
+        .product-info a {
+
+            display: inline-block;
+
+            text-decoration: none;
+
+            background: #4a281d;
+
+            color: white;
+
+            padding: 11px 25px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+
+        .product-info a:hover {
+
+            background: #713b27;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            background: #4a281d;
+
+            color: white;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            .products {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media(max-width:600px) {
+
+            .products {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .page-title {
+
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo-area">
+
+        <img src="logo.png"
+             alt="MugHaven Logo">
+
+        <div>
+
+            <h1>MugHaven</h1>
+
+            <p>CUPS & MUGS SHOP</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="Homepage.html">
+            HomePage
+        </a>
+
+        <a href="Aboutus.html">
+            About Us
+        </a>
+
+        <a href="Contactus.html">
+            Contact Us
+        </a>
+
+        <a href="Products.html"
+           class="active">
+            Products
+        </a>
+
+        <a href="login.html">
+            Log In
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- PRODUCTS -->
+
+<main>
+
+    <h2 class="page-title">
+        Our MugHaven Products ☕
+    </h2>
+
+
+    <p class="page-subtitle">
+        Find your perfect mug and make every sip special. ♡
+    </p>
+
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <!-- PUT YOUR FIRST IMAGE HERE -->
+
+            <img src="cup1.jfif"
+                 alt="MugHaven Special">
+
+
+            <div class="product-info">
+
+                <h2>
+                    MugHaven Special
+                </h2>
+
+                <p>
+                    Our signature MugHaven cup made
+                    for coffee lovers and cozy moments.
+                </p>
+
+                <h3>
+                    ₱349
+                </h3>
+
+                <a href="#">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <!-- PUT YOUR SECOND IMAGE HERE -->
+
+            <img src="cup2.jfif"
+                 alt="Cute Coffee Mug">
+
+
+            <div class="product-info">
+
+                <h2>
+                    Cute Coffee Mug
+                </h2>
+
+                <p>
+                    A cute and charming mug perfect
+                    for your morning coffee.
+                </p>
+
+                <h3>
+                    ₱299
+                </h3>
+
+                <a href="#">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <!-- PUT YOUR THIRD IMAGE HERE -->
+
+            <img src="cup3.jfif"
+                 alt="Classic Mug">
+
+
+            <div class="product-info">
+
+                <h2>
+                    Classic Mug
+                </h2>
+
+                <p>
+                    A simple and elegant mug for
+                    everyday drinks.
+                </p>
+
+                <h3>
+                    ₱279
+                </h3>
+
+                <a href="#">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <!-- PUT YOUR FOURTH IMAGE HERE -->
+
+            <img src="cup4.jfif"
+                 alt="Coffee Lover Mug">
+
+
+            <div class="product-info">
+
+                <h2>
+                    Coffee Lover Mug
+                </h2>
+
+                <p>
+                    Designed for coffee lovers who
+                    enjoy every warm and relaxing sip.
+                </p>
+
+                <h3>
+                    ₱329
+                </h3>
+
+                <a href="#">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card">
+
+            <!-- PUT YOUR FIFTH IMAGE HERE -->
+
+            <img src="cup5.jfif"
+                 alt="Sweet Heart Mug">
+
+
+            <div class="product-info">
+
+                <h2>
+                    Sweet Heart Mug
+                </h2>
+
+                <p>
+                    A lovely heart-themed mug that
+                    makes a perfect gift.
+                </p>
+
+                <h3>
+                    ₱319
+                </h3>
+
+                <a href="#">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card">
+
+            <!-- PUT YOUR SIXTH IMAGE HERE -->
+
+            <img src="cup6.png"
+                 alt="MugHaven Classic">
+
+
+            <div class="product-info">
+
+                <h2>
+                    MugHaven Classic
+                </h2>
+
+                <p>
+                    A cozy everyday mug with the
+                    classic MugHaven style.
+                </p>
+
+                <h3>
+                    ₱299
+                </h3>
+
+                <a href="#">
+                    Buy Now
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    ☕ MugHaven — Cups & Mugs Shop
+    · Made with warmth & happiness ♡
+
+</footer>
+
+
+</body>
+
+</html>

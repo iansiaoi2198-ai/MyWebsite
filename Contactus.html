@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MugHaven - Contact Us</title>
+
+    <link rel="icon" href="logo.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(255,190,130,.3),
+                    rgba(180,70,70,.35)
+                ),
+                url("mascot.png");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #4a281d;
+        }
+
+        header {
+            width: 100%;
+            padding: 15px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background:
+                rgba(255,245,225,.75);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 2px solid
+                rgba(255,255,255,.5);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logo-area h1 {
+            font-size: 30px;
+        }
+
+        .logo-area p {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+
+            color: #4a281d;
+
+            padding: 10px 16px;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #4a281d;
+            color: white;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 60px 0;
+        }
+
+        .title {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .title h2 {
+            font-size: 45px;
+        }
+
+        .contact {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+        .box {
+            padding: 35px;
+
+            background:
+                rgba(255,248,235,.8);
+
+            backdrop-filter: blur(10px);
+
+            border-radius: 25px;
+
+            border: 2px solid
+                rgba(255,255,255,.6);
+
+            box-shadow:
+                0 12px 25px
+                rgba(74,40,29,.2);
+        }
+
+        .box h2 {
+            margin-bottom: 15px;
+        }
+
+        .info {
+            margin-top: 20px;
+
+            padding: 15px 0;
+
+            border-bottom: 1px solid
+                rgba(74,40,29,.2);
+        }
+
+        .info b {
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+        .chibi {
+            display: block;
+
+            width: 250px;
+
+            margin: 25px auto 0;
+
+            border-radius: 20px;
+        }
+
+        form {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 14px;
+
+            border-radius: 15px;
+
+            border: 1px solid
+                rgba(74,40,29,.3);
+
+            font-size: 15px;
+
+            font-family: Arial;
+        }
+
+        textarea {
+            height: 150px;
+
+            resize: vertical;
+        }
+
+        button {
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background: #4a281d;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #4a281d;
+
+            color: white;
+        }
+
+        @media(max-width:800px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo-area">
+
+        <img src="logos.png"
+             alt="MugHaven Logo">
+
+        <div>
+
+            <h1>MugHaven</h1>
+
+            <p>CUPS & MUGS SHOP</p>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="Homepage.html">
+            HomePage
+        </a>
+
+        <a href="Aboutus.html">
+            About Us
+        </a>
+
+        <a href="Contactus.html"
+           class="active">
+            Contact Us
+        </a>
+
+        <a href="Products.html">
+            Products
+        </a>
+
+        <a href="login.html">
+            Log Out
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+<div class="title">
+
+    <h2>
+        Contact Us
+    </h2>
+
+    <p>
+        We would love to hear from you. ☕
+    </p>
+
+</div>
+
+
+<section class="contact">
+
+
+    <div class="box">
+
+        <h2>
+            Let's Talk ☕
+        </h2>
+
+        <p>
+            Have a question about our mugs,
+            an order, or a design idea?
+            Send us a message.
+        </p>
+
+
+        <div class="info">
+
+            <b>
+                📍 Shop
+            </b>
+
+            MugHaven Cups & Mugs Shop
+
+        </div>
+
+
+        <div class="info">
+
+            <b>
+                📧 Email
+            </b>
+
+            hello@mughaven.example
+
+        </div>
+
+
+        <div class="info">
+
+            <b>
+                📱 Phone
+            </b>
+
+            +63 900 123 4567
+
+        </div>
+
+
+        <div class="info">
+
+            <b>
+                🕘 Hours
+            </b>
+
+            Monday–Saturday ·
+            9:00 AM–6:00 PM
+
+        </div>
+
+
+        <img src="chibi.png"
+             class="chibi"
+             alt="MugHaven Chibi">
+
+    </div>
+
+
+
+    <div class="box">
+
+        <h2>
+            Send a Message
+        </h2>
+
+
+        <form>
+
+            <input type="text"
+                   placeholder="Your Name"
+                   required>
+
+
+            <input type="email"
+                   placeholder="Your Email"
+                   required>
+
+
+            <input type="text"
+                   placeholder="Subject"
+                   required>
+
+
+            <textarea
+                placeholder="Write your message..."
+                required></textarea>
+
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    ☕ MugHaven — Cups & Mugs Shop
+    · Made with warmth & happiness ♡
+
+</footer>
+
+
+</body>
+
+</html>

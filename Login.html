@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MugHaven - Log In</title>
+
+    <link rel="icon" href="logo.png">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(255,190,130,.3),
+                    rgba(180,70,70,.35)
+                ),
+                url("mascot.png");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: #4a281d;
+        }
+
+        header {
+            width: 100%;
+            padding: 15px 50px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background:
+                rgba(255,245,225,.75);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 2px solid
+                rgba(255,255,255,.5);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logo-area h1 {
+            font-size: 30px;
+        }
+
+        .logo-area p {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+
+        /* LOGIN */
+
+        .login-container {
+
+            width: 90%;
+            max-width: 950px;
+
+            margin: 70px auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            background:
+                rgba(255,248,235,.82);
+
+            backdrop-filter: blur(15px);
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            border: 2px solid
+                rgba(255,255,255,.6);
+
+            box-shadow:
+                0 15px 40px
+                rgba(74,40,29,.25);
+        }
+
+        .login-left {
+
+            background:
+                rgba(74,40,29,.9);
+
+            color: white;
+
+            padding: 45px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .login-left img {
+
+            width: 230px;
+
+            margin-bottom: 20px;
+        }
+
+        .login-left h2 {
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+        .login-left p {
+
+            line-height: 1.7;
+        }
+
+        .login-right {
+
+            padding: 45px;
+        }
+
+        .login-right h2 {
+
+            font-size: 40px;
+
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+
+            margin-bottom: 25px;
+        }
+
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+
+            width: 100%;
+
+            padding: 15px;
+
+            border-radius: 25px;
+
+            border: 1px solid
+                rgba(74,40,29,.25);
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+        input:focus {
+
+            border-color: #d99a19;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(217,154,25,.15);
+        }
+
+        .remember {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 14px;
+        }
+
+        .remember label {
+
+            display: flex;
+
+            gap: 6px;
+
+            align-items: center;
+        }
+
+        .remember input {
+
+            width: auto;
+        }
+
+        .login-button {
+
+            border: none;
+
+            padding: 15px;
+
+            border-radius: 25px;
+
+            background: #4a281d;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .login-button:hover {
+
+            background: #713b27;
+
+            transform: translateY(-2px);
+        }
+
+        #errorMessage {
+
+            display: none;
+
+            color: #a52727;
+
+            font-weight: bold;
+        }
+
+        .demo {
+
+            margin-top: 18px;
+
+            padding: 12px;
+
+            background: #fff0d2;
+
+            border-radius: 12px;
+
+            font-size: 13px;
+        }
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            background: #4a281d;
+
+            color: white;
+        }
+
+
+        @media(max-width:800px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .login-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo-area">
+
+        <img src="logos.png"
+             alt="MugHaven Logo">
+
+        <div>
+
+            <h1>MugHaven</h1>
+
+            <p>CUPS & MUGS SHOP</p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div class="login-container">
+
+
+    <!-- LEFT -->
+
+    <div class="login-left">
+
+        <img src="logos.png"
+             alt="MugHaven Logo">
+
+        <h2>
+            Welcome Back!
+        </h2>
+
+        <p>
+            Step into MugHaven and discover
+            your next favorite cup of happiness.
+            ☕♡
+        </p>
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+
+    <div class="login-right">
+
+        <h2>
+            Log In
+        </h2>
+
+        <p class="subtitle">
+            Enter your account details to continue.
+        </p>
+
+
+        <form id="loginForm">
+
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                required>
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required>
+
+
+            <div class="remember">
+
+                <label>
+
+                    <input type="checkbox">
+
+                    Remember Me
+
+                </label>
+
+
+                <span>
+                    Forgot Password?
+                </span>
+
+            </div>
+
+
+            <p id="errorMessage"></p>
+
+
+            <button
+                type="submit"
+                class="login-button">
+
+                Login
+
+            </button>
+
+
+        </form>
+
+
+        <div class="demo">
+
+            <b>Demo Login</b><br>
+
+            Username:
+            <b>admin</b><br>
+
+            Password:
+            <b>1234</b>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<footer>
+
+    ☕ MugHaven — Cups & Mugs Shop
+    · Made with warmth & happiness ♡
+
+</footer>
+
+
+
+<!-- ONLY JAVASCRIPT IN THE WEBSITE -->
+
+<script>
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+
+    loginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const username =
+                document.getElementById(
+                    "username"
+                ).value.trim();
+
+
+            const password =
+                document.getElementById(
+                    "password"
+                ).value;
+
+
+            const error =
+                document.getElementById(
+                    "errorMessage"
+                );
+
+
+            if (
+                username === "admin" &&
+                password === "1234"
+            ) {
+
+                window.location.href =
+                    "Homepage.html";
+
+            }
+
+            else {
+
+                error.textContent =
+                    "Incorrect username or password!";
+
+                error.style.display =
+                    "block";
+
+            }
+
+        }
+
+    );
+
+</script>
+
+
+</body>
+
+</html>
