@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -115,7 +114,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
-            align-items: stretch;
         }
 
         .box {
@@ -154,8 +152,6 @@
         .chibi {
             display: block;
             width: 250px;
-            max-width: 100%;
-            height: auto;
             margin: 25px auto 0;
             border-radius: 20px;
         }
@@ -267,11 +263,13 @@
                 margin-top: 8px;
             }
 
-            /* Keep both boxes side by side and aligned */
+            /* Keep both contact boxes side by side */
             .contact {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 10px;
-                align-items: stretch;
+
+                /* FIX: Prevent cards from stretching to equal height */
+                align-items: start;
             }
 
             .box {
@@ -279,9 +277,6 @@
                 padding: 15px 10px;
                 border-radius: 22px;
                 overflow-wrap: anywhere;
-
-                /* Both boxes fill the same row height */
-                height: 100%;
             }
 
             .box h2 {
@@ -311,14 +306,11 @@
             }
 
             form {
-                display: flex;
-                flex-direction: column;
                 gap: 10px;
             }
 
             input,
             textarea {
-                display: block;
                 width: 100%;
                 min-width: 0;
                 padding: 10px 8px;
@@ -331,17 +323,16 @@
             }
 
             button {
-                display: block;
                 width: 100%;
                 padding: 10px 5px;
                 font-size: 11px;
                 line-height: 1.4;
             }
 
-            /* Keep the message box content compact */
+            /* FIX: Fit the message card to its own content */
             .contact .box:last-child {
-                height: 100%;
-                align-self: stretch;
+                height: fit-content;
+                align-self: start;
                 padding-bottom: 15px;
             }
 
