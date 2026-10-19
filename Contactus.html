@@ -115,6 +115,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
+            align-items: stretch;
         }
 
         .box {
@@ -153,6 +154,8 @@
         .chibi {
             display: block;
             width: 250px;
+            max-width: 100%;
+            height: auto;
             margin: 25px auto 0;
             border-radius: 20px;
         }
@@ -264,13 +267,11 @@
                 margin-top: 8px;
             }
 
-            /* Keep both contact boxes side by side */
+            /* Keep both boxes side by side and aligned */
             .contact {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 10px;
-
-                /* FIX: Prevent cards from stretching to equal height */
-                align-items: start;
+                align-items: stretch;
             }
 
             .box {
@@ -278,6 +279,9 @@
                 padding: 15px 10px;
                 border-radius: 22px;
                 overflow-wrap: anywhere;
+
+                /* Both boxes fill the same row height */
+                height: 100%;
             }
 
             .box h2 {
@@ -307,11 +311,14 @@
             }
 
             form {
+                display: flex;
+                flex-direction: column;
                 gap: 10px;
             }
 
             input,
             textarea {
+                display: block;
                 width: 100%;
                 min-width: 0;
                 padding: 10px 8px;
@@ -324,16 +331,17 @@
             }
 
             button {
+                display: block;
                 width: 100%;
                 padding: 10px 5px;
                 font-size: 11px;
                 line-height: 1.4;
             }
 
-            /* FIX: Fit the message card to its own content */
+            /* Keep the message box content compact */
             .contact .box:last-child {
-                height: fit-content;
-                align-self: start;
+                height: 100%;
+                align-self: stretch;
                 padding-bottom: 15px;
             }
 
@@ -550,4 +558,5 @@
 </body>
 
 </html>
+
 
