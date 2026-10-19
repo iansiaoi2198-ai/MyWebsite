@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,6 @@
 
     <link rel="icon" href="logo.png">
 
-
     <style>
 
         * {
@@ -21,11 +21,8 @@
             box-sizing: border-box;
         }
 
-
         body {
-
             font-family: Arial, sans-serif;
-
             min-height: 100vh;
 
             background:
@@ -36,142 +33,85 @@
                 url("mascot.png");
 
             background-size: cover;
-
             background-position: center;
-
             background-attachment: fixed;
 
             color: #4a281d;
         }
 
-
-        
-
         header {
-
             width: 100%;
-
             padding: 15px 50px;
 
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
-            background:
-                rgba(255,245,225,.75);
-
+            background: rgba(255,245,225,.75);
             backdrop-filter: blur(10px);
 
             border-bottom: 2px solid
                 rgba(255,255,255,.5);
         }
 
-
         .logo-area {
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
         }
 
-
         .logo-area img {
-
             width: 60px;
-
             height: 60px;
-
             object-fit: contain;
         }
 
-
         .logo-area h1 {
-
             font-size: 30px;
         }
 
-
         .logo-area p {
-
             font-size: 12px;
-
             letter-spacing: 2px;
         }
 
-
-        
-
         nav {
-
             display: flex;
-
             gap: 10px;
         }
 
-
         nav a {
-
             text-decoration: none;
-
             color: #4a281d;
-
             padding: 10px 16px;
-
             border-radius: 25px;
-
             font-weight: bold;
-
             transition: .3s;
         }
 
-
         nav a:hover,
         nav a.active {
-
             background: #4a281d;
-
             color: white;
         }
 
-
-        
-
         .page-title {
-
             text-align: center;
-
             font-size: 40px;
-
             margin-top: 45px;
-
             color: #4a281d;
         }
 
-
         .page-subtitle {
-
             text-align: center;
-
             margin-top: 10px;
-
             margin-bottom: 35px;
-
             font-size: 17px;
         }
 
-
-        
-
         .products {
-
             width: 90%;
-
             max-width: 1200px;
-
             margin: 0 auto 60px;
 
             display: grid;
@@ -182,21 +122,14 @@
             gap: 25px;
         }
 
-
-        
-
         .product-card {
-
-            background:
-                rgba(255,248,235,.85);
-
+            background: rgba(255,248,235,.85);
             backdrop-filter: blur(12px);
 
             border: 2px solid
                 rgba(255,255,255,.7);
 
             border-radius: 50px;
-
             overflow: hidden;
 
             box-shadow:
@@ -206,9 +139,7 @@
             transition: .3s;
         }
 
-
         .product-card:hover {
-
             transform: translateY(-8px);
 
             box-shadow:
@@ -216,310 +147,233 @@
                 rgba(74,40,29,.35);
         }
 
-
-        
-
         .product-card img {
-
             width: 100%;
-
             height: 250px;
-
             object-fit: cover;
-
             display: block;
 
-            background:
-                rgba(255,255,255,.35);
-
+            background: rgba(255,255,255,.35);
             padding: 15px;
-
             border-radius: 60px;
-
         }
 
-
-        
-
         .product-info {
-
             padding: 20px;
-
             text-align: center;
         }
 
-
         .product-info h2 {
-
             font-size: 24px;
-
             margin-bottom: 10px;
         }
 
-
         .product-info p {
-
             font-size: 15px;
-
             line-height: 1.6;
-
             margin-bottom: 12px;
         }
 
-
         .product-info h3 {
-
             font-size: 22px;
-
             color: #b76b19;
-
             margin-bottom: 15px;
         }
 
-
-        
-
         .product-info a {
-
             display: inline-block;
-
             text-decoration: none;
-
             background: #4a281d;
-
             color: white;
-
             padding: 11px 25px;
-
             border-radius: 25px;
-
             font-weight: bold;
-
             transition: .3s;
         }
 
-
         .product-info a:hover {
-
             background: #713b27;
-
             transform: translateY(-2px);
         }
 
-
-        
-
         footer {
-
             text-align: center;
-
             padding: 25px;
-
             background: #4a281d;
-
             color: white;
         }
-
-
-        
 
         @media(max-width:900px) {
 
             header {
-
                 flex-direction: column;
-
                 gap: 15px;
             }
 
-
             nav {
-
                 flex-wrap: wrap;
-
                 justify-content: center;
             }
 
-
             .products {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr);
             }
 
         }
 
+        @media (max-width: 600px) {
 
+            header {
+                padding: 12px 15px;
+            }
 
+            .logo-area img {
+                width: 48px;
+                height: 48px;
+            }
 
+            .logo-area h1 {
+                font-size: 25px;
+            }
 
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+            }
 
-@media (max-width: 600px) {
+            nav a {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
 
-    header {
-        padding: 12px 15px;
-    }
+            .page-title {
+                font-size: 27px;
+                line-height: 1.25;
+                margin: 28px 12px 0;
+            }
 
-    .logo-area img {
-        width: 48px;
-        height: 48px;
-    }
+            .page-subtitle {
+                font-size: 13px;
+                line-height: 1.5;
+                margin: 10px 12px 22px;
+            }
 
-    .logo-area h1 {
-        font-size: 25px;
-    }
+            .products {
+                width: calc(100% - 20px);
+                max-width: none;
+                margin: 0 auto 30px;
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 6px;
-    }
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                align-items: stretch;
+                gap: 8px;
+            }
 
-    nav a {
-        padding: 8px 10px;
-        font-size: 12px;
-    }
+            .product-card {
+                min-width: 0;
+                height: 100%;
 
-    .page-title {
-        font-size: 27px;
-        line-height: 1.25;
-        margin: 28px 12px 0;
-    }
+                display: flex;
+                flex-direction: column;
 
-    .page-subtitle {
-        font-size: 13px;
-        line-height: 1.5;
-        margin: 10px 12px 22px;
-    }
+                border-radius: 16px;
+                border-width: 1px;
 
-    
-    .products {
-        width: calc(100% - 20px);
-        max-width: none;
-        margin: 0 auto 30px;
+                box-shadow:
+                    0 5px 12px
+                    rgba(74, 40, 29, 0.15);
 
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        align-items: stretch;
-        gap: 8px;
-    }
+                overflow: hidden;
+            }
 
-    
-    .product-card {
-        min-width: 0;
-        height: 100%;
+            .product-card img {
+                display: block;
+                width: calc(100% - 10px);
+                height: 85px;
+                flex-shrink: 0;
 
-        display: flex;
-        flex-direction: column;
+                margin: 5px auto 0;
+                padding: 3px;
 
-        border-radius: 16px;
-        border-width: 1px;
-        box-shadow: 0 5px 12px rgba(74, 40, 29, 0.15);
-        overflow: hidden;
-    }
+                border-radius: 12px;
+                object-fit: cover;
+            }
 
-    
-    .product-card img {
-        display: block;
-        width: calc(100% - 10px);
-        height: 85px;
-        flex-shrink: 0;
+            .product-info {
+                padding: 8px 5px 12px;
+                text-align: center;
 
-        margin: 5px auto 0;
-        padding: 3px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex: 1;
+            }
 
-        border-radius: 12px;
-        object-fit: cover;
-    }
+            .product-info h2 {
+                width: 100%;
+                min-height: 2.6em;
 
-    
-    .product-info {
-        padding: 8px 5px 12px;
-        text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1;
-    }
+                font-size: 12px;
+                line-height: 1.3;
+                margin-bottom: 6px;
 
-    
-    .product-info h2 {
-        width: 100%;
-        min-height: 2.6em;
+                overflow-wrap: anywhere;
+            }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            .product-info p {
+                width: 100%;
+                flex: 1;
 
-        font-size: 12px;
-        line-height: 1.3;
-        margin-bottom: 6px;
+                font-size: 10px;
+                line-height: 1.4;
+                margin-bottom: 7px;
 
-        overflow-wrap: anywhere;
-    }
+                overflow-wrap: anywhere;
+            }
 
-    
-    .product-info p {
-        width: 100%;
-        flex: 1;
+            .product-info h3 {
+                width: 100%;
+                font-size: 13px;
+                margin-top: auto;
+                margin-bottom: 8px;
+            }
 
-        font-size: 10px;
-        line-height: 1.4;
-        margin-bottom: 7px;
+            .product-info a {
+                display: inline-block;
 
-        overflow-wrap: anywhere;
-    }
+                padding: 7px 8px;
+                margin-top: 0;
 
-    
-    .product-info h3 {
-        width: 100%;
-        font-size: 13px;
-        margin-top: auto;
-        margin-bottom: 8px;
-    }
+                font-size: 10px;
+                line-height: 1.3;
+                border-radius: 18px;
 
-    
-    .product-info a {
-        display: inline-block;
+                max-width: 100%;
+                white-space: nowrap;
+            }
 
-        padding: 7px 8px;
-        margin-top: 0;
+            .product-card:hover {
+                transform: none;
+            }
 
-        font-size: 10px;
-        line-height: 1.3;
-        border-radius: 18px;
+            footer {
+                padding: 18px 10px;
+                font-size: 11px;
+                line-height: 1.5;
+            }
 
-        max-width: 100%;
-        white-space: nowrap;
-    }
-
-    
-    .product-card:hover {
-        transform: none;
-    }
-
-    
-    footer {
-        padding: 18px 10px;
-        font-size: 11px;
-        line-height: 1.5;
-    }
-
-}
-
-
-
+        }
 
     </style>
 
 </head>
 
-
 <body>
-
-
-
 
 <header>
 
@@ -529,48 +383,27 @@
              alt="MugHaven Logo">
 
         <div>
-
             <h1>MugHaven</h1>
-
             <p>CUPS & MUGS SHOP</p>
-
         </div>
 
     </div>
 
-
-    
-
     <nav>
 
-        <a href="index.html">
-            HomePage
-        </a>
+        <a href="index.html">HomePage</a>
 
-        <a href="Aboutus.html">
-            About Us
-        </a>
+        <a href="Aboutus.html">About Us</a>
 
-        <a href="Contactus.html">
-            Contact Us
-        </a>
+        <a href="Contactus.html">Contact Us</a>
 
-        <a href="Products.html"
-           class="active">
-            Products
-        </a>
+        <a href="Products.html" class="active">Products</a>
 
-        <a href="Login.html">
-            Log Out
-        </a>
+        <a href="Login.html">Log Out</a>
 
     </nav>
 
 </header>
-
-
-
-
 
 <main>
 
@@ -578,231 +411,255 @@
         Our MugHaven Products ☕
     </h2>
 
-
     <p class="page-subtitle">
         Find your perfect mug and make every sip special. ♡
     </p>
 
-
     <div class="products">
 
-
-        
-
+        <!-- PRODUCT 1 -->
         <div class="product-card">
 
-            
-
-            <img src="cup1.jfif"
-                 alt="MugHaven Special">
-
+            <img src="cup1.jfif" alt="MugHaven Special">
 
             <div class="product-info">
-
-                <h2>
-                    MugHaven Special
-                </h2>
+                <h2>MugHaven Special</h2>
 
                 <p>
                     Our signature MugHaven cup made
                     for coffee lovers and cozy moments.
                 </p>
 
-                <h3>
-                    ₱349
-                </h3>
+                <h3>₱349</h3>
 
-                <a href="#">
-                    Buy Now
-                </a>
-
+                <a href="#">Buy Now</a>
             </div>
 
         </div>
 
-
-
-        
-
+        <!-- PRODUCT 2 -->
         <div class="product-card">
 
-            
-
-            <img src="cup2.jfif"
-                 alt="Cute Coffee Mug">
-
+            <img src="cup2.jfif" alt="Cute Coffee Mug">
 
             <div class="product-info">
-
-                <h2>
-                    Cute Coffee Mug
-                </h2>
+                <h2>Cute Coffee Mug</h2>
 
                 <p>
                     A cute and charming mug perfect
                     for your morning coffee.
                 </p>
 
-                <h3>
-                    ₱299
-                </h3>
+                <h3>₱299</h3>
 
-                <a href="#">
-                    Buy Now
-                </a>
-
+                <a href="#">Buy Now</a>
             </div>
 
         </div>
 
-
-
-        
-
+        <!-- PRODUCT 3 -->
         <div class="product-card">
 
-            
-
-            <img src="cup3.jfif"
-                 alt="Classic Mug">
-
+            <img src="cup3.jfif" alt="Classic Mug">
 
             <div class="product-info">
-
-                <h2>
-                    Classic Mug
-                </h2>
+                <h2>Classic Mug</h2>
 
                 <p>
                     A simple and elegant mug for
                     everyday drinks.
                 </p>
 
-                <h3>
-                    ₱279
-                </h3>
+                <h3>₱279</h3>
 
-                <a href="#">
-                    Buy Now
-                </a>
-
+                <a href="#">Buy Now</a>
             </div>
 
         </div>
 
-
-
-        
-
+        <!-- PRODUCT 4 -->
         <div class="product-card">
 
-            
-
-            <img src="cup4.jfif"
-                 alt="Coffee Lover Mug">
-
+            <img src="cup4.jfif" alt="Coffee Lover Mug">
 
             <div class="product-info">
-
-                <h2>
-                    Coffee Lover Mug
-                </h2>
+                <h2>Coffee Lover Mug</h2>
 
                 <p>
                     Designed for coffee lovers who
                     enjoy every warm and relaxing sip.
                 </p>
 
-                <h3>
-                    ₱329
-                </h3>
+                <h3>₱329</h3>
 
-                <a href="#">
-                    Buy Now
-                </a>
-
+                <a href="#">Buy Now</a>
             </div>
 
         </div>
 
-
-
-        
-
+        <!-- PRODUCT 5 -->
         <div class="product-card">
 
-            
-
-            <img src="cup5.jfif"
-                 alt="Sweet Heart Mug">
-
+            <img src="cup5.jfif" alt="Sweet Heart Mug">
 
             <div class="product-info">
-
-                <h2>
-                    Sweet Heart Mug
-                </h2>
+                <h2>Sweet Heart Mug</h2>
 
                 <p>
                     A lovely heart-themed mug that
                     makes a perfect gift.
                 </p>
 
-                <h3>
-                    ₱319
-                </h3>
+                <h3>₱319</h3>
 
-                <a href="#">
-                    Buy Now
-                </a>
-
+                <a href="#">Buy Now</a>
             </div>
 
         </div>
 
-
-
-        
-
+        <!-- PRODUCT 6 -->
         <div class="product-card">
 
-            
-
-            <img src="cup6.png"
-                 alt="MugHaven Classic">
-
+            <img src="cup6.png" alt="MugHaven Classic">
 
             <div class="product-info">
-
-                <h2>
-                    MugHaven Classic
-                </h2>
+                <h2>MugHaven Classic</h2>
 
                 <p>
                     A cozy everyday mug with the
                     classic MugHaven style.
                 </p>
 
-                <h3>
-                    ₱349
-                </h3>
+                <h3>₱349</h3>
 
-                <a href="#">
-                    Buy Now
-                </a>
-
+                <a href="#">Buy Now</a>
             </div>
 
         </div>
 
+        <!-- PRODUCT 7 -->
+        <div class="product-card">
+
+            <img src="cup7.jfif" alt="Pastel Dream Mug">
+
+            <div class="product-info">
+                <h2>Pastel Dream Mug</h2>
+
+                <p>
+                    A dreamy pastel mug decorated
+                    with soft clouds and stars.
+                </p>
+
+                <h3>₱329</h3>
+
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 8 -->
+        <div class="product-card">
+
+            <img src="cup8.jfif" alt="Kitty Paw Mug">
+
+            <div class="product-info">
+                <h2>Kitty Paw Mug</h2>
+
+                <p>
+                    A cute cat-inspired mug for
+                    your cozy coffee breaks.
+                </p>
+
+                <h3>₱299</h3>
+
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 9 -->
+        <div class="product-card">
+
+            <img src="cup9.jfif" alt="Minimalist Mug">
+
+            <div class="product-info">
+                <h2>Minimalist Mug</h2>
+
+                <p>
+                    A simple sage-green mug for
+                    a clean and elegant look.
+                </p>
+
+                <h3>₱279</h3>
+
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 10 -->
+        <div class="product-card">
+
+            <img src="cup10.jfif" alt="Travel Buddy Cup">
+
+            <div class="product-info">
+                <h2>Travel Buddy Cup</h2>
+
+                <p>
+                    A handy travel cup for your
+                    favorite drink on the go.
+                </p>
+
+                <h3>₱379</h3>
+
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 11 -->
+        <div class="product-card">
+
+            <img src="cup11.jfif" alt="Kawaii Art Mug">
+
+            <div class="product-info">
+                <h2>Kawaii Art Mug</h2>
+
+                <p>
+                    A charming character mug for
+                    fans of cute designs.
+                </p>
+
+                <h3>₱349</h3>
+
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
+
+        <!-- PRODUCT 12 -->
+        <div class="product-card">
+
+            <img src="cup12.jfif" alt="Holiday Cocoa Mug">
+
+            <div class="product-info">
+                <h2>Holiday Cocoa Mug</h2>
+
+                <p>
+                    A festive mug perfect for hot
+                    chocolate and holiday cheer.
+                </p>
+
+                <h3>₱399</h3>
+
+                <a href="#">Buy Now</a>
+            </div>
+
+        </div>
 
     </div>
 
 </main>
-
-
-
-
 
 <footer>
 
@@ -811,7 +668,7 @@
 
 </footer>
 
-
 </body>
 
 </html>
+
