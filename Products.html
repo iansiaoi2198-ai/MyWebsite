@@ -352,6 +352,7 @@
 
 
 
+
 /* MOBILE PRODUCTS - 3 CARDS IN A ROW */
 @media (max-width: 600px) {
 
@@ -391,6 +392,7 @@
         margin: 10px 12px 22px;
     }
 
+    /* THREE PRODUCTS PER ROW */
     .products {
         width: calc(100% - 20px);
         max-width: none;
@@ -398,69 +400,114 @@
 
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
         gap: 8px;
     }
 
+    /* PRODUCT CARD */
     .product-card {
         min-width: 0;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
         border-radius: 16px;
         border-width: 1px;
         box-shadow: 0 5px 12px rgba(74, 40, 29, 0.15);
         overflow: hidden;
     }
 
+    /* PRODUCT IMAGE */
     .product-card img {
         display: block;
         width: calc(100% - 10px);
         height: 85px;
+        flex-shrink: 0;
+
         margin: 5px auto 0;
         padding: 3px;
+
         border-radius: 12px;
         object-fit: cover;
     }
 
+    /* PRODUCT DETAILS */
     .product-info {
         padding: 8px 5px 12px;
         text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
     }
 
+    /* CONSISTENT PRODUCT NAME SPACE */
     .product-info h2 {
+        width: 100%;
+        min-height: 2.6em;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         font-size: 12px;
         line-height: 1.3;
         margin-bottom: 6px;
+
         overflow-wrap: anywhere;
     }
 
+    /* PRODUCT DESCRIPTION */
     .product-info p {
+        width: 100%;
+        flex: 1;
+
         font-size: 10px;
         line-height: 1.4;
         margin-bottom: 7px;
+
         overflow-wrap: anywhere;
     }
 
+    /* PRICE */
     .product-info h3 {
+        width: 100%;
         font-size: 13px;
+        margin-top: auto;
         margin-bottom: 8px;
     }
 
+    /* BUY BUTTON */
     .product-info a {
         display: inline-block;
+
         padding: 7px 8px;
+        margin-top: 0;
+
         font-size: 10px;
+        line-height: 1.3;
         border-radius: 18px;
+
         max-width: 100%;
+        white-space: nowrap;
     }
 
+    /* DISABLE HOVER MOVEMENT ON PHONES */
     .product-card:hover {
         transform: none;
     }
 
+    /* FOOTER */
     footer {
         padding: 18px 10px;
         font-size: 11px;
         line-height: 1.5;
     }
+
 }
+
 
 
 
