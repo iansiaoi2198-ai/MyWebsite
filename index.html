@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -256,7 +257,9 @@
             color: white;
         }
 
-        @media(max-width:800px) {
+        /* TABLETS */
+
+        @media (max-width: 800px) {
 
             header {
                 flex-direction: column;
@@ -278,13 +281,113 @@
 
         }
 
+        /* MOBILE PHONES */
+
+        @media (max-width: 600px) {
+
+            body {
+                background-attachment: scroll;
+            }
+
+            header {
+                padding: 15px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo-area img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .logo-area h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 12px;
+            }
+
+            main {
+                width: 92%;
+                padding: 25px 0;
+            }
+
+            .hero {
+                min-height: 0;
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero-text {
+                padding: 10px 5px;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 34px;
+                line-height: 1.2;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .welcome {
+                font-size: 13px;
+                padding: 9px 14px;
+            }
+
+            .button {
+                padding: 11px 17px;
+                margin: 4px;
+                font-size: 13px;
+            }
+
+            .hero-image {
+                padding: 10px;
+                border-radius: 25px;
+            }
+
+            .hero-image img {
+                display: block;
+                width: 100%;
+                height: auto;
+                border-radius: 18px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 25px;
+            }
+
+            .feature {
+                padding: 22px 18px;
+                border-radius: 24px;
+            }
+
+            footer {
+                padding: 20px 12px;
+                font-size: 12px;
+                line-height: 1.6;
+            }
+
+        }
+
     </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
@@ -302,7 +405,6 @@
         </div>
 
     </div>
-
 
     <nav>
 
@@ -331,12 +433,9 @@
 
 </header>
 
-
 <main>
 
-
 <section class="hero">
-
 
     <div class="hero-text">
 
@@ -356,24 +455,17 @@
             relaxing moment more special.
         </p>
 
-
         <a href="Products.html"
            class="button">
-
             Shop Our Mugs
-
         </a>
-
 
         <a href=".html"
            class="button light">
-
             Learn More
-
         </a>
 
     </div>
-
 
     <div class="hero-image">
 
@@ -382,13 +474,9 @@
 
     </div>
 
-
 </section>
 
-
-
 <section class="features">
-
 
     <div class="feature">
 
@@ -407,7 +495,6 @@
 
     </div>
 
-
     <div class="feature">
 
         <div class="icon">
@@ -424,7 +511,6 @@
         </p>
 
     </div>
-
 
     <div class="feature">
 
@@ -443,12 +529,9 @@
 
     </div>
 
-
 </section>
 
-
 </main>
-
 
 <footer>
 
@@ -456,7 +539,6 @@
     · Made with warmth & happiness ♡
 
 </footer>
-
 
 </body>
 
